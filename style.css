@@ -1,0 +1,104 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px;
+    background-color: linen
+    
+}
+
+header, main, footer {
+    box-shadow: -2px 2px 10px 1px black;
+    display: flex;
+    margin: 20 px;
+    border-radius: 20px;
+    width: 80vw;
+    background-color: lightblue;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    width: 80%;
+    height: 40%;
+    margin-bottom: 4em;
+    box-shadow: 0px 0px 5px 5px;
+}
+
+main{
+    height: 80vh;
+    flex-direction: column;
+    justify-content: end;
+    padding-bottom: 6em;
+}
+
+header, footer{
+    height: 10vh;
+    background-color: lightsalmon;
+}
+
+
+form {
+    /* Center the form on the page */
+    margin: 0 auto;
+    width: 500px;
+    /* Form outline */
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+    background-color: lightgoldenrodyellow;
+    box-shadow: #000 1px 1px 10px 1px;
+    margin-top: 2em;
+}
+  
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+form li + li {
+    margin-top: 1em;
+}
+  
+label {
+    /* Uniform size & alignment */
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+}
+  
+input{
+    /* To make sure that all text fields have the same font settings
+       By default, textareas have a monospace font */
+    font: 1em sans-serif;
+  
+    /* Uniform text field size */
+    width: 300px;
+    box-sizing: border-box;
+  
+    /* Match form field borders */
+    border: 1px solid #999;
+  }
+  
+  input:focus {
+
+    border-color: red;
+  }
+  
+.button {
+    /* Align buttons with the text fields */
+    padding-left: 90px; /* same size as the label elements */
+}
+  
+button {
+
+    margin-left: 16em;
+  } 
