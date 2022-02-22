@@ -1,31 +1,46 @@
-
-const collection = document.querySelector('#collection')
+// Constantes
+let library = [];
 let newBook = {}
 
+const collection = document.querySelector('#collection')
+const button = document.querySelector('#submitButton')
+
+// Funcion Objeto
 function book(name,author, year) {
     this.name = name
     this.author = author
     this.year = year
 }
 
+// object prototypes
+book.prototype.delete = function (){
+    console.log(this.name)
+}
 
+
+// Functions
 
 function display(){
-    console.log('funciona')
-
     newBook = new book(
         document.getElementById('title').value,
         document.getElementById('author').value,
         document.getElementById('year').value
     )
 
-    const div = document.createElement('div');
-    collection.appendChild(div);
-    div.textContent = ` El libro ingresado es ${newBook.name}, 
-    su autor es ${newBook.author} y el anio de publicacion es
-    ${newBook.year}`
+    library.push(newBook);
+
+    const divOne = document.createElement('div');
+    collection.appendChild(divOne);
+    const divTwo = document.createElement('div');
+    divOne.appendChild(divTwo);
+    const buttonOne = document.createElement('button');
+    divOne.appendChild(buttonOne);
+    divTwo.textContent = `Book Name: ${newBook.name} Author: ${newBook.author} Year: ${newBook.year}`
+    buttonOne.textContent = 'Delete book';
+    buttonOne.addEventListener('click', book.delete())
+
 }
 
-const button = document.querySelector('#submitButton')
-button.addEventListener('click', display)
+// Event listeners
 
+button.addEventListener('click', display)
